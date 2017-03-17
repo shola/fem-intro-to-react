@@ -8,10 +8,10 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "update-test": "npm run test -- -u",
-    "build": "webpack js/ClientApp.js public/bundle.js",
-    "dev": "webpack-dev-server js/ClientApp.js public/bundle.js",
+    "build": "webpack --module-bind 'js=babel' js/ClientApp.js public/bundle.js",
+    "dev": "webpack-dev-server --module-bind 'js=babel' js/ClientApp.js public/bundle.js",
     "lint": "eslint js/**/*.js server.js",
-    "watch": "webpack --watch js/ClientApp.js public/bundle.js",
+    "watch": "webpack --module-bind 'js=babel' --watch js/ClientApp.js public/bundle.js",
     "webpack": "webpack"
   },
   "dependencies": {

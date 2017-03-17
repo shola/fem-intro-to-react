@@ -1,14 +1,13 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var div = React.DOM.div;
-var h1 = React.DOM.h1;
+import React from 'react';
+import ReactDOM from 'react-dom';
+const div = React.DOM.div;
+const h1 = React.DOM.h1;
 
-var MyTitle = React.createClass({
+// props are like parameters that are passed to a react element
+const MyTitle = React.createClass({
     render() {
         return div(null, h1({ style: { color: this.props.color } }, this.props.title));
     }
 });
 
-// var MyTitleFactory = React.createFactory(MyTitle);
-
-module.exports = MyTitle;
+export default MyTitle;
