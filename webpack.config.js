@@ -4,7 +4,7 @@ module.exports = {
     context: __dirname, // makes your app know where it lives on your file system
     entry: './js/ClientApp',
     output: {
-        path: path.join(__dirname, '/public'),
+        path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
     },
     resolve: {
