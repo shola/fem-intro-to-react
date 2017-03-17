@@ -12,11 +12,13 @@
     "dev": "webpack-dev-server",
     "lint": "eslint js/**/*.js server.js",
     "watch": "webpack --watch",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "flow": "flow"
   },
   "dependencies": {
     "axios": "0.15.2",
     "express": "4.14.0",
+    "flow-bin": "^0.42.0",
     "history": "^4.4.0",
     "lodash": "4.16.2",
     "preact": "^6.4.0",
