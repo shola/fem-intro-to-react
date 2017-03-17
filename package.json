@@ -8,10 +8,11 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "update-test": "npm run test -- -u",
-    "build": "webpack",
-    "dev": "webpack-dev-server",
+    "build": "webpack js/ClientApp.js public/bundle.js",
+    "dev": "webpack-dev-server js/ClientApp.js public/bundle.js",
     "lint": "eslint js/**/*.js server.js",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch js/ClientApp.js public/bundle.js",
+    "webpack": "webpack"
   },
   "dependencies": {
     "axios": "0.15.2",
@@ -25,7 +26,8 @@
     "react-redux": "4.4.0",
     "react-router": "4.0.0-alpha.5",
     "redux": "3.3.1",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "standard": "^9.0.1"
   },
   "devDependencies": {
     "babel-core": "6.16.0",
