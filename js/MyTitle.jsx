@@ -1,13 +1,12 @@
 // @flow
 import React, { Component, PropTypes } from 'react';
 
-// TODO: Read: "https://flowtype.org/blog/2015/02/18/Typecasts.html"
 type Props = {
     title: string, // required prop and required value
     color?: ?string // optional prop and optional value
 };
 
-export default function MyTitle(props: Props) {
+function MyTitle(props: Props): React.Element<any> {
     const { title, color = 'red' } = props;
     const style = { color: color };
 
@@ -17,3 +16,5 @@ export default function MyTitle(props: Props) {
         </h1>
     );
 }
+
+export default MyTitle;
