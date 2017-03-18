@@ -22,6 +22,10 @@ module.exports = {
                 // if a file name passes the "test" regexp, run it through babel
                 test: /\.(js|jsx|es)?$/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
         ]
     }
