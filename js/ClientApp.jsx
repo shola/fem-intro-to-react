@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MyTitle from './MyTitle';
 
-const MyFirstComponent = () => (
-    <div>
-        <MyTitle title="props work like this!!!" color="mediumaquamarine" />
-        <MyTitle title="passing props to this component. nbd" />
+const App = () => (
+    <div className="app">
+        <div className="landing">
+            <MyTitle title="My Video App" />
+            <input className="search" type="text" placeholder="search" />
+            <button className="browse-all"> or Browse All</button>
+        </div>
     </div>
 );
 
-ReactDOM.render(<MyFirstComponent />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
