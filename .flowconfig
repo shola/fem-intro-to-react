@@ -1,8 +1,9 @@
 [ignore]
-.*/node_modules/fbjs/.*
+.*/node_modules/*
+.*/public/*
 
 [include]
-
+./js/**
 [libs]
 
 [options]
