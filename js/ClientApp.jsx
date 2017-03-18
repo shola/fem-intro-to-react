@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router';
 import Landing from './Landing';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Search from './Search';
 
-const App = (): React.Element<any> => (
-    <Router>
-        <Route path="/" component={Landing} />
+const MyRouter = () => (
+    <Router history={hashHistory}>
+        <div>
+            <Route path="/" component={Landing} />
+            <Route path="/search" component={Search} />
+        </div>
     </Router>
 );
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<MyRouter />, document.getElementById('app'));
