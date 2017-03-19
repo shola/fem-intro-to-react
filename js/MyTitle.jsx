@@ -11,7 +11,7 @@ function MyTitle(props: Props): React.Element<any> {
     const style = { color: color };
 
     return (
-        <h1 style={style}>
+        <h1 className="title" style={style}>
             {title}
         </h1>
     );

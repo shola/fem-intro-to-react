@@ -10,7 +10,6 @@ type Props = {
  */
 const Layout = (props: Props) => (
     <div className="app-container">
-        <h1>Welcome to my video app!</h1>
         {props.children}
     </div>
 );

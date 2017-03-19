@@ -7,6 +7,10 @@ import ShowCard from './ShowCard';
  */
 const Search = () => (
     <div className="container">
+        <header className="header">
+            <h1 className="brand">svideo</h1>
+            <input className="search-input" type="text" placeholder="Search" />
+        </header>
         <div className="shows">
             {data.shows.map(ShowCard)}
         </div>

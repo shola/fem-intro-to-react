@@ -24,14 +24,12 @@ const ShowCard = (props: Props): React.Element<any> => {
         description
     } = props;
     return (
-        <div className="show" key={imdbID}>
-            <div className="show-card">
-                <img className="show-img" src={`public/img/posters/${poster}`} />
-                <div className="show-text">
-                    <h3 className="show-title">{title}</h3>
-                    <h4 className="show-year">({year})</h4>
-                    <p className="show-description">{description}</p>
-                </div>
+        <div className="show-card" key={imdbID}>
+            <img className="show-card-img" src={`public/img/posters/${poster}`} />
+            <div className="show-card-text">
+                <h3 className="show-card-title">{title}</h3>
+                <h4 className="show-card-year">({year})</h4>
+                <p className="show-card-description">{description}</p>
             </div>
         </div>
     );
