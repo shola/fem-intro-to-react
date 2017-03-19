@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     context: __dirname, // makes your app know where it lives on your file system
-    entry: './js/ClientApp',
+    entry: './js/Main',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'

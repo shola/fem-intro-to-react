@@ -1,12 +1,16 @@
 import React from 'react';
-import shows from '../public/data';
+import data from '../public/data';
+import ShowCard from './ShowCard';
 
-export default function Search() {
-    return (
-        <pre>
-            <code>
-                {JSON.stringify(shows, null, 4)}
-            </code>
-        </pre>
-    );
-}
+/**
+ * Render the search page
+ */
+const Search = () => (
+    <div className="container">
+        <div className="shows">
+            {data.shows.map(ShowCard)}
+        </div>
+    </div>
+);
+
+export default Search;

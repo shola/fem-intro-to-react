@@ -1,1 +1,3 @@
 1) prefer stateless components to using React.createClass; and "invoke" them by using jsx.
+2) annotate param and return type of a stateless component, and destructure the props inside the body of the function.
+3) flow HATES react-router. don't type check files that import react-router
