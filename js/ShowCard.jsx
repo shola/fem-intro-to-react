@@ -1,21 +1,14 @@
 // @flow
-import React from 'react';
 
-type Props = {
-    title: string, // required props with a required value
-    imdbID: string,
-    poster: string,
-    year: string,
-    description: string, // optional props with optional values
-    trailer?: ?string
-};
+import React from 'react';
+import { ShowPropsType, ShowStateType } from './ShowTypes';
 
 /**
  * We must add keys to components that will need to render in different places
  * in the DOM. React knows how to re-use keyed components, instead of 
  * creating new ones and wasting resources.
  */
-const ShowCard = (props: Props): React.Element<any> => {
+const ShowCard = (props: ShowPropsType): React.Element<any> => {
     const {
         title,
         imdbID,
