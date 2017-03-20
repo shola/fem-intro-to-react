@@ -1,14 +1,19 @@
-// @flow
+import * as React from 'react';
 
-import React from 'react';
-import { ShowPropsType, ShowStateType } from './ShowTypes';
+interface ShowPropsType {
+    title: string,
+    imdbID: string,
+    poster: string,
+    year: string,
+    description: string,
+    trailer: string
+}
 
-/**
- * We must add keys to components that will need to render in different places
- * in the DOM. React knows how to re-use keyed components, instead of 
- * creating new ones and wasting resources.
- */
-const ShowCard = (props: ShowPropsType): React.Element<any> => {
+interface ShowStateType {
+    searchTerm: string
+}
+
+const ShowCard = (props: ShowPropsType) => {
     const {
         title,
         imdbID,

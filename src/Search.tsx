@@ -1,15 +1,26 @@
-// @flow
-
-import React, { Component } from 'react';
-import data from '../public/data';
+import * as React from 'react';
+import data from '../public/data.js';
 import ShowCard from './ShowCard';
-import { ShowPropsType, ShowStateType } from './ShowTypes';
+
+interface ShowPropsType {
+    title: string,
+    imdbID: string,
+    poster: string,
+    year: string,
+    description: string,
+    trailer: string
+}
+
+interface ShowStateType {
+    searchTerm: string
+}
 
 /**
  * Private helper that decides which shows should be displayed on the search page
  */
-function _showFilterer(state: ShowStateType): Function {
-    return function _showCheck(show: ShowPropsType): boolean {
+function _showFilterer(state: ShowStateType) {
+    // return function _showCheck(show: ShowPropsType): boolean {
+    return function _showCheck(show: ShowPropsType) {
         const searchSpace = `${show.title} ${show.description}`.toUpperCase();
         const searchFor = state.searchTerm.toUpperCase();
 
@@ -21,10 +32,7 @@ function _showFilterer(state: ShowStateType): Function {
  * Render the search page, now with a little bit of state.
  */
 
-class Search extends Component {
-    state: ShowStateType;
-    handleSearchTermEvent: Function;
-
+class Search extends React.Component<ShowPropsType, ShowStateType> {
     constructor() {
         super();
         this.handleSearchTermEvent = this.handleSearchTermEvent.bind(this);
@@ -32,7 +40,7 @@ class Search extends Component {
             searchTerm: ''
         };
     }
-    handleSearchTermEvent(e: { target: { value: string } }): void {
+    handleSearchTermEvent(e: any) {
         this.setState({ searchTerm: e.target.value });
     }
     render() {

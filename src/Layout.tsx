@@ -1,10 +1,8 @@
-// @flow
+import * as React from 'react';
 
-import React from 'react';
-
-type Props = {
-    children: React.Element<any>
-};
+interface Props {
+    children: any
+}
 
 /**
  * Common UI between all layouts

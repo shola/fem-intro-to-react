@@ -1,7 +1,5 @@
-// @flow
-
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import Landing from './Landing';
 import Search from './Search';

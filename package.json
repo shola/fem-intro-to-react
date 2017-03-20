@@ -6,29 +6,39 @@
   "author": "Brian Holt <btholt@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test jest",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "update-test": "npm run test -- -u",
     "build": "webpack",
     "dev": "webpack-dev-server",
     "start": "webpack --watch",
     "webpack": "webpack",
-    "flow": "flow"
+    "tslint": "tslint"
   },
   "dependencies": {
+    "@types/react": "^15.0.16",
+    "@types/react-addons-test-utils": "^0.14.17",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-router": "^3.0.8",
     "axios": "0.15.2",
     "express": "4.14.0",
-    "flow-bin": "^0.42.0",
     "lodash": "4.16.2",
     "preact": "^6.4.0",
     "preact-compat": "^3.9.3",
-    "react": "15.3.2",
-    "react-dom": "15.3.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "react-redux": "4.4.0",
     "react-router": "^3.0.0",
     "redux": "3.3.1",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "@types/jest": "^19.2.2",
+    "@types/react": "^15.0.16",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-router": "^3.0.8",
+    "awesome-typescript-loader": "^3.1.2",
     "babel-core": "6.16.0",
     "babel-jest": "16.0.0",
     "babel-loader": "6.2.7",
@@ -40,13 +50,17 @@
     "css-loader": "0.25.0",
     "enzyme": "2.0.0",
     "enzyme-to-json": "^1.3.0",
-    "jest": "15.1.1",
+    "jest": "^19.0.0",
     "jsdom": "9.5.0",
     "json-loader": "0.5.4",
-    "react-addons-test-utils": "15.3.2",
-    "react-test-renderer": "15.3.2",
+    "react-addons-test-utils": "15.4.2",
+    "react-test-renderer": "15.4.2",
+    "source-map-loader": "^0.2.0",
     "style-loader": "0.13.1",
-    "webpack": "2.1.0-beta.25",
+    "ts-jest": "^19.0.2",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1",
+    "webpack": "2.2.1",
     "webpack-dev-server": "1.16.2"
   },
   "directories": {
@@ -62,6 +76,19 @@
     "intro",
     "redux"
   ],
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      ".*": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js|jsx)$"
+  },
   "bugs": {
     "url": "https://github.com/btholt/complete-intro-to-react/issues"
   },
