@@ -15,10 +15,6 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'awesome-typescript-loader'
-            },
-            {
-                test: /\.json$/,
-                loader: 'json-loader'
             }
         ]
     },

@@ -1,26 +1,23 @@
 {
   "name": "complete-intro-to-react",
-  "version": "1.0.0",
-  "description": "A two day workshop on a complete intro to React",
-  "main": "index.js",
-  "author": "Brian Holt <btholt@gmail.com>",
+  "version": "0.0.1",
+  "description": "Extending/updating the excellent FrontEnd Masters course materials with typescript, jest, etc.",
+  "main": "./src/Main.tsx",
+  "author": "Mike Situ <michael.o.situ@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "update-test": "npm run test -- -u",
-    "build": "webpack",
-    "dev": "webpack-dev-server",
     "start": "webpack --watch",
-    "webpack": "webpack",
     "tslint": "tslint"
   },
   "dependencies": {
     "@types/react": "^15.0.16",
-    "@types/react-addons-test-utils": "^0.14.17",
     "@types/react-dom": "^0.14.23",
     "@types/react-router": "^3.0.8",
+    "@types/jest": "^19.2.2",
+    "@types/react-addons-test-utils": "^0.14.17",
     "axios": "0.15.2",
     "express": "4.14.0",
     "lodash": "4.16.2",
@@ -34,25 +31,10 @@
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^19.2.2",
-    "@types/react": "^15.0.16",
-    "@types/react-dom": "^0.14.23",
-    "@types/react-router": "^3.0.8",
     "awesome-typescript-loader": "^3.1.2",
-    "babel-core": "6.16.0",
-    "babel-jest": "16.0.0",
-    "babel-loader": "6.2.7",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
-    "babel-polyfill": "^6.16.0",
-    "babel-preset-latest": "^6.24.0",
-    "babel-preset-react": "6.16.0",
-    "babel-register": "6.16.0",
-    "css-loader": "0.25.0",
     "enzyme": "2.0.0",
-    "enzyme-to-json": "^1.3.0",
     "jest": "^19.0.0",
     "jsdom": "9.5.0",
-    "json-loader": "0.5.4",
     "react-addons-test-utils": "15.4.2",
     "react-test-renderer": "15.4.2",
     "source-map-loader": "^0.2.0",
@@ -63,18 +45,17 @@
     "webpack": "2.2.1",
     "webpack-dev-server": "1.16.2"
   },
-  "directories": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/btholt/complete-intro-to-react.git"
+    "url": "git+https://github.com/shola/fem-intro-to-react.git"
   },
   "keywords": [
     "react",
     "workshop",
     "intro",
-    "redux"
+    "redux",
+    "typescript",
+    "jest"
   ],
   "jest": {
     "verbose": true,
@@ -90,7 +71,7 @@
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js|jsx)$"
   },
   "bugs": {
-    "url": "https://github.com/btholt/complete-intro-to-react/issues"
+    "url": "https://github.com/shola/fem-intro-to-react/issues"
   },
-  "homepage": "https://github.com/btholt/complete-intro-to-react#readme"
+  "homepage": "https://github.com/shola/fem-intro-to-react#readme"
 }

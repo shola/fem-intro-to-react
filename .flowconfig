@@ -1,9 +1,0 @@
-[ignore]
-
-[include]
-./js/**
-./public/data.json
-./node_modules/react-router/umd/react-router.js
-[libs]
-
-[options]
