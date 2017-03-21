@@ -12,6 +12,7 @@ interface HeaderProps {
     showSearch?: boolean,
     setSearchTerm?: SearchEventHandler
 }
+
 class Header extends React.Component<HeaderProps, {}> {
     constructor(props: HeaderProps) {
         super(props);

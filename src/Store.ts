@@ -1,6 +1,9 @@
 import * as Redux from 'redux';
 import * as ReactRedux from 'react-redux';
 
+/**
+ * Redux is for app state, and views can hold on to their own state?
+ */
 const SET_SEARCH_TERM = 'setSearchTerm';
 const initialState = {
     searchTerm: ''
