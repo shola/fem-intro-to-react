@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search Page Check snapshot for unexpected changes 1`] = `
+exports[`Search Page should be the same as the last snapshot 1`] = `
 <div
   className="container"
 >
@@ -629,6 +629,203 @@ exports[`Search Page Check snapshot for unexpected changes 1`] = `
           className="show-card-description"
         >
           Bob and David emerge from the time machine they entered sixteen years ago and are reunited with the cast of Mr. Show.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Search Page should filter show cards based on search term (case insensitive) 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="header"
+  >
+    <h1
+      className="brand"
+    >
+      svideo
+    </h1>
+    <input
+      className="search-input"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+      value="House of Cards"
+    />
+  </header>
+  <div
+    className="shows"
+  >
+    <div
+      className="show-card"
+    >
+      <img
+        className="show-card-img"
+        src="public/img/posters/hoc.jpg"
+      />
+      <div
+        className="show-card-text"
+      >
+        <h3
+          className="show-card-title"
+        >
+          House of Cards
+        </h3>
+        <h4
+          className="show-card-year"
+        >
+          (
+          2013–
+          )
+        </h4>
+        <p
+          className="show-card-description"
+        >
+          A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Search Page should filter show cards based on search term (case insensitive) 2`] = `
+<div
+  className="container"
+>
+  <header
+    className="header"
+  >
+    <h1
+      className="brand"
+    >
+      svideo
+    </h1>
+    <input
+      className="search-input"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+      value="house OF caRDS"
+    />
+  </header>
+  <div
+    className="shows"
+  >
+    <div
+      className="show-card"
+    >
+      <img
+        className="show-card-img"
+        src="public/img/posters/hoc.jpg"
+      />
+      <div
+        className="show-card-text"
+      >
+        <h3
+          className="show-card-title"
+        >
+          House of Cards
+        </h3>
+        <h4
+          className="show-card-year"
+        >
+          (
+          2013–
+          )
+        </h4>
+        <p
+          className="show-card-description"
+        >
+          A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Search Page should filter show cards based on search term (case insensitive) 3`] = `
+<div
+  className="container"
+>
+  <header
+    className="header"
+  >
+    <h1
+      className="brand"
+    >
+      svideo
+    </h1>
+    <input
+      className="search-input"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+      value="House"
+    />
+  </header>
+  <div
+    className="shows"
+  >
+    <div
+      className="show-card"
+    >
+      <img
+        className="show-card-img"
+        src="public/img/posters/hoc.jpg"
+      />
+      <div
+        className="show-card-text"
+      >
+        <h3
+          className="show-card-title"
+        >
+          House of Cards
+        </h3>
+        <h4
+          className="show-card-year"
+        >
+          (
+          2013–
+          )
+        </h4>
+        <p
+          className="show-card-description"
+        >
+          A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.
+        </p>
+      </div>
+    </div>
+    <div
+      className="show-card"
+    >
+      <img
+        className="show-card-img"
+        src="public/img/posters/fh.jpg"
+      />
+      <div
+        className="show-card-text"
+      >
+        <h3
+          className="show-card-title"
+        >
+          Fuller House
+        </h3>
+        <h4
+          className="show-card-year"
+        >
+          (
+          2016–
+          )
+        </h4>
+        <p
+          className="show-card-description"
+        >
+          D.J. Tanner-Fuller is a widow and mother of three. Things become too much to handle, so she asks for help from her sister Stephanie and her best friend Kimmy.
         </p>
       </div>
     </div>
