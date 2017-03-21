@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router';
+import { connector } from './Store';
 // const { Link } = ReactRouter;
 
 interface SearchEventHandler {
@@ -9,15 +10,15 @@ interface SearchEventHandler {
 interface HeaderProps {
     searchTerm?: string,
     showSearch?: boolean,
-    handleSearchTermEvent?: SearchEventHandler
+    setSearchTerm?: SearchEventHandler
 }
-export default class Header extends React.Component<HeaderProps, {}> {
+class Header extends React.Component<HeaderProps, {}> {
     constructor(props: HeaderProps) {
         super(props);
         this.handleSearchTermEvent = this.handleSearchTermEvent.bind(this);
     }
     handleSearchTermEvent(e: any) {
-        this.props.handleSearchTermEvent(e.target.value);
+        this.props.setSearchTerm(e.target.value);
     }
     render() {
         let utilSpace;
@@ -52,3 +53,5 @@ export default class Header extends React.Component<HeaderProps, {}> {
         );
     }
 }
+
+export default connector(Header);

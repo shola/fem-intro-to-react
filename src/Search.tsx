@@ -2,6 +2,7 @@ import * as React from 'react';
 import data from '../public/data.js';
 import ShowCard from './ShowCard';
 import Header from './Header';
+import { connector } from './Store';
 
 // TODO: clean up these types
 interface ShowPropsType {
@@ -12,51 +13,29 @@ interface ShowPropsType {
     description: string,
     trailer: string,
     route: any,
-    shows: any
-}
-
-interface ShowStateType {
+    shows: any,
     searchTerm: string
 }
 
 /**
  * Private helper that decides which shows should be displayed on the search page
  */
-function _showFilterer(state: ShowStateType) {
-    // return function _showCheck(show: ShowPropsType): boolean {
+function _showFilterer(props: ShowPropsType) {
     return function _showCheck(show: ShowPropsType) {
         const searchSpace = `${show.title} ${show.description}`.toUpperCase();
-        const searchFor = state.searchTerm.toUpperCase();
+        const searchFor = props.searchTerm.toUpperCase();
 
         return searchSpace.indexOf(searchFor) >= 0;
     };
 }
 
-class Search extends React.Component<ShowPropsType, ShowStateType> {
-    constructor(props: ShowPropsType) {
-        super(props);
-        this.handleSearchTermEvent = this.handleSearchTermEvent.bind(this);
-        this.state = {
-            searchTerm: ''
-        };
-    }
-    handleSearchTermEvent(searchTerm: string) {
-        this.setState({ searchTerm });
-    }
-    render() {
-        return (
-            <div className="container">
-                <Header
-                    showSearch={true}
-                    searchTerm={this.state.searchTerm}
-                    handleSearchTermEvent={this.handleSearchTermEvent}
-                />
-                <div className="shows">
-                    {data.shows.filter(_showFilterer(this.state)).map(ShowCard)}
-                </div>
-            </div>
-        );
-    }
-}
+const Search = (props: ShowPropsType) => (
+    <div className="container">
+        <Header showSearch={true} />
+        <div className="shows">
+            {data.shows.filter(_showFilterer(props)).map(ShowCard)}
+        </div>
+    </div>
+);
 
-export default Search;
+export default connector(Search);

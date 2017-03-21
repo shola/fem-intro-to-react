@@ -1,4 +1,4 @@
-import * as redux from 'redux';
+import * as Redux from 'redux';
 import * as ReactRedux from 'react-redux';
 
 const SET_SEARCH_TERM = 'setSearchTerm';
@@ -20,4 +20,15 @@ const reduceSearchTerm = (state: any, action: any) => {
     return newState;
 };
 
-const store = redux.createStore(rootReducer);
+const mapStateToProps = (state: any) => ({ searchTerm: state.searchTerm });
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+        setSearchTerm(searchTerm: string) {
+            dispatch({ type: SET_SEARCH_TERM, value: searchTerm });
+        }
+    };
+};
+
+const store = Redux.createStore(rootReducer);
+const connector = ReactRedux.connect(mapStateToProps, mapDispatchToProps);
+export { connector, store };

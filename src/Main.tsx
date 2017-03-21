@@ -5,6 +5,9 @@ import Landing from './Landing';
 import Search from './Search';
 import Layout from './Layout';
 import Details from './Details';
+import { store } from './Store';
+import * as ReactRedux from 'react-redux';
+const { Provider } = ReactRedux;
 
 /**
  * Main entrypoint for the app.
@@ -18,13 +21,15 @@ import Details from './Details';
 class MyRouter extends React.Component<any, any> {
     render() {
         return (
-            <Router history={hashHistory}>
-                <Route path="/" component={Layout}>
-                    <IndexRoute component={Landing} />
-                    <Route path="/search" component={Search} />
-                    <Route path="/details/:id" component={Details} />
-                </Route>
-            </Router>
+            <Provider store={store}>
+                <Router history={hashHistory}>
+                    <Route path="/" component={Layout}>
+                        <IndexRoute component={Landing} />
+                        <Route path="/search" component={Search} />
+                        <Route path="/details/:id" component={Details} />
+                    </Route>
+                </Router>
+            </Provider>
         );
     }
 }
