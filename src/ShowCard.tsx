@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router';
 
 interface ShowPropsType {
     title: string,
@@ -23,7 +24,9 @@ const ShowCard = (props: ShowPropsType) => {
     } = props;
     return (
         <div className="show-card" key={imdbID}>
-            <img className="show-card-img" src={`public/img/posters/${poster}`} />
+            <Link to={`/details/${imdbID}`}>
+                <img className="show-card-img" src={`public/img/posters/${poster}`} />
+            </Link>
             <div className="show-card-text">
                 <h3 className="show-card-title">{title}</h3>
                 <h4 className="show-card-year">({year})</h4>

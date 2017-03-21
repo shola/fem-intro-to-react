@@ -10,7 +10,13 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <h1
       className="brand"
     >
-      svideo
+      <a
+        className="brand-link"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        svideo
+      </a>
     </h1>
     <input
       className="search-input"
@@ -26,10 +32,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/hoc.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/hoc.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -55,10 +66,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/dd.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/dd.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -84,10 +100,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/oitnb.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/oitnb.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -113,10 +134,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/ad.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/ad.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -142,10 +168,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/uks.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/uks.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -171,10 +202,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/mp.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/mp.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -200,10 +236,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/bl.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/bl.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -229,10 +270,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/bh.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/bh.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -258,10 +304,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/hg.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/hg.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -287,10 +338,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/tk.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/tk.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -316,10 +372,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/l.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/l.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -345,10 +406,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/mon.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/mon.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -374,10 +440,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/f.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/f.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -403,10 +474,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/jj.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/jj.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -432,10 +508,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/n.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/n.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -461,10 +542,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/whas.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/whas.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -490,10 +576,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/cdc.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/cdc.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -519,10 +610,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/mam.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/mam.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -548,10 +644,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/s8.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/s8.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -577,10 +678,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/fh.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/fh.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -606,10 +712,15 @@ exports[`Search Page should be the same as the last snapshot 1`] = `
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/wbd.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/wbd.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -646,7 +757,13 @@ exports[`Search Page should filter show cards based on search term (case insensi
     <h1
       className="brand"
     >
-      svideo
+      <a
+        className="brand-link"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        svideo
+      </a>
     </h1>
     <input
       className="search-input"
@@ -662,10 +779,15 @@ exports[`Search Page should filter show cards based on search term (case insensi
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/hoc.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/hoc.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -702,7 +824,13 @@ exports[`Search Page should filter show cards based on search term (case insensi
     <h1
       className="brand"
     >
-      svideo
+      <a
+        className="brand-link"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        svideo
+      </a>
     </h1>
     <input
       className="search-input"
@@ -718,10 +846,15 @@ exports[`Search Page should filter show cards based on search term (case insensi
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/hoc.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/hoc.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -758,7 +891,13 @@ exports[`Search Page should filter show cards based on search term (case insensi
     <h1
       className="brand"
     >
-      svideo
+      <a
+        className="brand-link"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        svideo
+      </a>
     </h1>
     <input
       className="search-input"
@@ -774,10 +913,15 @@ exports[`Search Page should filter show cards based on search term (case insensi
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/hoc.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/hoc.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >
@@ -803,10 +947,15 @@ exports[`Search Page should filter show cards based on search term (case insensi
     <div
       className="show-card"
     >
-      <img
-        className="show-card-img"
-        src="public/img/posters/fh.jpg"
-      />
+      <a
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <img
+          className="show-card-img"
+          src="public/img/posters/fh.jpg"
+        />
+      </a>
       <div
         className="show-card-text"
       >

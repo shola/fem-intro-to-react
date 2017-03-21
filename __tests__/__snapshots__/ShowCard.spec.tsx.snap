@@ -4,10 +4,15 @@ exports[`ShowCard View Check snapshot for unexpected changes 1`] = `
 <div
   className="show-card"
 >
-  <img
-    className="show-card-img"
-    src="public/img/posters/undefined"
-  />
+  <a
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <img
+      className="show-card-img"
+      src="public/img/posters/undefined"
+    />
+  </a>
   <div
     className="show-card-text"
   >

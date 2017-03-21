@@ -4,6 +4,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import Landing from './Landing';
 import Search from './Search';
 import Layout from './Layout';
+import Details from './Details';
 
 /**
  * Main entrypoint for the app.
@@ -14,13 +15,17 @@ import Layout from './Layout';
  * - The 2 nested routes can be passed individually to the Layout as props.children.
  */
 
-const MyRouter = () => (
-    <Router history={hashHistory}>
-        <Route path="/" component={Layout}>
-            <IndexRoute component={Landing} />
-            <Route path="/search" component={Search} />
-        </Route>
-    </Router>
-);
-
+class MyRouter extends React.Component<any, any> {
+    render() {
+        return (
+            <Router history={hashHistory}>
+                <Route path="/" component={Layout}>
+                    <IndexRoute component={Landing} />
+                    <Route path="/search" component={Search} />
+                    <Route path="/details/:id" component={Details} />
+                </Route>
+            </Router>
+        );
+    }
+}
 ReactDOM.render(<MyRouter />, document.getElementById('app'));

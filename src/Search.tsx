@@ -1,6 +1,7 @@
 import * as React from 'react';
 import data from '../public/data.js';
 import ShowCard from './ShowCard';
+import Header from './Header';
 
 interface ShowPropsType {
     title: string,
@@ -8,7 +9,10 @@ interface ShowPropsType {
     poster: string,
     year: string,
     description: string,
-    trailer: string
+    trailer: string,
+    route: any,
+    shows: any,
+    handleSearchTerm?: any
 }
 
 interface ShowStateType {
@@ -33,8 +37,8 @@ function _showFilterer(state: ShowStateType) {
  */
 
 class Search extends React.Component<ShowPropsType, ShowStateType> {
-    constructor() {
-        super();
+    constructor(props: ShowPropsType) {
+        super(props);
         this.handleSearchTermEvent = this.handleSearchTermEvent.bind(this);
         this.state = {
             searchTerm: ''
@@ -46,16 +50,11 @@ class Search extends React.Component<ShowPropsType, ShowStateType> {
     render() {
         return (
             <div className="container">
-                <header className="header">
-                    <h1 className="brand">svideo</h1>
-                    <input
-                        className="search-input"
-                        type="text"
-                        placeholder="Search"
-                        value={this.state.searchTerm}
-                        onChange={this.handleSearchTermEvent}
-                    />
-                </header>
+                <Header
+                    showSearch={true}
+                    handleSearchTermEvent={this.handleSearchTermEvent}
+                    searchTerm={this.state.searchTerm}
+                />
                 <div className="shows">
                     {data.shows.filter(_showFilterer(this.state)).map(ShowCard)}
                 </div>
