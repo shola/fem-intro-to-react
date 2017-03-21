@@ -3,8 +3,18 @@ import Header from './Header';
 import data from '../public/data.js';
 const showData = data.shows;
 
-const Details = () => {
-    const { id } = this.props.params;
+interface DetailsProps {
+    children?: any,
+    location: object,
+    params: { id: string },
+    route: object,
+    routeParams: object,
+    router: object,
+    routers: object[]
+}
+
+const Details = (props: DetailsProps) => {
+    const { id } = props.params;
     const currentShowData = showData.filter(show => show.imdbID === id);
 
     if (currentShowData.length < 1) {
