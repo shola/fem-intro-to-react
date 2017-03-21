@@ -8,10 +8,17 @@ interface SearchEventHandler {
 
 interface HeaderProps {
     searchTerm?: string,
-    handleSearchTermEvent?: SearchEventHandler,
-    showSearch?: boolean
+    showSearch?: boolean,
+    handleSearchTermEvent?: SearchEventHandler
 }
 export default class Header extends React.Component<HeaderProps, {}> {
+    constructor(props: HeaderProps) {
+        super(props);
+        this.handleSearchTermEvent = this.handleSearchTermEvent.bind(this);
+    }
+    handleSearchTermEvent(e: any) {
+        this.props.handleSearchTermEvent(e.target.value);
+    }
     render() {
         let utilSpace;
         if (this.props.showSearch) {
@@ -21,7 +28,7 @@ export default class Header extends React.Component<HeaderProps, {}> {
                     className="search-input"
                     placeholder="Search"
                     value={this.props.searchTerm}
-                    onChange={this.props.handleSearchTermEvent}
+                    onChange={this.handleSearchTermEvent}
                 />
             );
         } else {

@@ -3,6 +3,7 @@ import data from '../public/data.js';
 import ShowCard from './ShowCard';
 import Header from './Header';
 
+// TODO: clean up these types
 interface ShowPropsType {
     title: string,
     imdbID: string,
@@ -11,8 +12,7 @@ interface ShowPropsType {
     description: string,
     trailer: string,
     route: any,
-    shows: any,
-    handleSearchTerm?: any
+    shows: any
 }
 
 interface ShowStateType {
@@ -32,10 +32,6 @@ function _showFilterer(state: ShowStateType) {
     };
 }
 
-/**
- * Render the search page, now with a little bit of state.
- */
-
 class Search extends React.Component<ShowPropsType, ShowStateType> {
     constructor(props: ShowPropsType) {
         super(props);
@@ -44,16 +40,16 @@ class Search extends React.Component<ShowPropsType, ShowStateType> {
             searchTerm: ''
         };
     }
-    handleSearchTermEvent(e: any) {
-        this.setState({ searchTerm: e.target.value });
+    handleSearchTermEvent(searchTerm: string) {
+        this.setState({ searchTerm });
     }
     render() {
         return (
             <div className="container">
                 <Header
                     showSearch={true}
-                    handleSearchTermEvent={this.handleSearchTermEvent}
                     searchTerm={this.state.searchTerm}
+                    handleSearchTermEvent={this.handleSearchTermEvent}
                 />
                 <div className="shows">
                     {data.shows.filter(_showFilterer(this.state)).map(ShowCard)}
