@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import Landing from './Landing';
 import Search from './Search';
 import Layout from './Layout';
@@ -8,6 +8,13 @@ import { store } from './Store';
 import * as ReactRedux from 'react-redux';
 const { Provider } = ReactRedux;
 
+const myRoutes = () => (
+    <Route path="/" component={Layout}>
+        <IndexRoute component={Landing} />
+        <Route path="/search" component={Search} />
+        <Route path="/details/:id" component={Details} />
+    </Route>
+);
 /**
  * Main entrypoint for the app.
  *
@@ -21,16 +28,12 @@ class MyRouter extends React.Component<any, any> {
     render() {
         return (
             <Provider store={store}>
-                <Router history={hashHistory}>
-                    <Route path="/" component={Layout}>
-                        <IndexRoute component={Landing} />
-                        <Route path="/search" component={Search} />
-                        <Route path="/details/:id" component={Details} />
-                    </Route>
+                <Router history={browserHistory}>
+                    {myRoutes()}
                 </Router>
             </Provider>
         );
     }
 }
 
-export default MyRouter;
+export default { MyRouter, myRoutes };
