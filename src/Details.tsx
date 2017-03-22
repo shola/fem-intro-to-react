@@ -1,9 +1,19 @@
 import * as React from 'react';
 import Header from './Header';
-import data from '../public/data.js';
-const showData = data.shows;
+import { connector } from './Store';
 
-interface DetailsProps {
+interface ShowPropType {
+    title: string,
+    imdbID: string,
+    poster: string,
+    year: string,
+    description: string,
+    trailer: string,
+    route: any,
+    shows: any
+}
+interface DetailsPropsType {
+    shows: ShowPropType[],
     children?: any,
     location: object,
     params: { id: string },
@@ -13,11 +23,10 @@ interface DetailsProps {
     routers: object[]
 }
 
-const Details = (props: DetailsProps) => {
-    const { id } = props.params;
-    const currentShowData = showData.filter(show => show.imdbID === id);
+const Details = (props: DetailsPropsType) => {
+    const currentShow = props.shows.find(show => show.imdbID === props.params.id);
 
-    if (currentShowData.length < 1) {
+    if (currentShow === undefined) {
         return (
             <div>
                 <Header />
@@ -34,7 +43,7 @@ const Details = (props: DetailsProps) => {
             poster,
             trailer,
             imdbID
-        } = currentShowData[0];
+        } = currentShow;
         const trailerUrl = `https://www.youtube-nocookie.com/embed/${trailer}?rel=0&amp;controls=0&amp;showinfo=0`;
 
         return (
@@ -57,4 +66,4 @@ const Details = (props: DetailsProps) => {
     }
 };
 
-export default Details;
+export default connector(Details);

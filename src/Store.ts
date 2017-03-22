@@ -1,12 +1,14 @@
 import * as Redux from 'redux';
 import * as ReactRedux from 'react-redux';
-
+import data from '../public/data.js';
+const { shows } = data;
 /**
  * Redux is for app state, and views can hold on to their own state?
  */
 const SET_SEARCH_TERM = 'setSearchTerm';
 const initialState = {
-    searchTerm: ''
+    searchTerm: '',
+    shows
 };
 const rootReducer = (state = initialState, action: { type: string, action: any }) => {
     switch (action.type) {
@@ -23,7 +25,10 @@ const reduceSearchTerm = (state: any, action: any) => {
     return newState;
 };
 
-const mapStateToProps = (state: any) => ({ searchTerm: state.searchTerm });
+const mapStateToProps = (state: any) => ({
+    searchTerm: state.searchTerm,
+    shows: state.shows
+});
 const mapDispatchToProps = (dispatch: any) => {
     return {
         setSearchTerm(searchTerm: string) {
@@ -31,7 +36,8 @@ const mapDispatchToProps = (dispatch: any) => {
         }
     };
 };
-debugger;
+
+declare var window: any;
 const store = Redux.createStore(
     rootReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

@@ -4,8 +4,7 @@ import ShowCard from './ShowCard';
 import Header from './Header';
 import { connector } from './Store';
 
-// TODO: clean up these types
-interface ShowPropsType {
+interface ShowPropType {
     title: string,
     imdbID: string,
     poster: string,
@@ -13,27 +12,25 @@ interface ShowPropsType {
     description: string,
     trailer: string,
     route: any,
-    shows: any,
+    shows: any
+}
+
+interface SearchPropsType {
+    shows: ShowPropType[],
     searchTerm: string
 }
 
-/**
- * Private helper that decides which shows should be displayed on the search page
- */
-function _showFilterer(props: ShowPropsType) {
-    return function _showCheck(show: ShowPropsType) {
-        const searchSpace = `${show.title} ${show.description}`.toUpperCase();
-        const searchFor = props.searchTerm.toUpperCase();
-
-        return searchSpace.indexOf(searchFor) >= 0;
-    };
-}
-
-const Search = (props: ShowPropsType) => (
+const Search = (props: SearchPropsType) => (
     <div className="container">
         <Header showSearch={true} />
         <div className="shows">
-            {data.shows.filter(_showFilterer(props)).map(ShowCard)}
+            {props.shows
+                .filter(show => {
+                    const searchSpace = `${show.title} ${show.description}`.toUpperCase();
+                    const searchFor = props.searchTerm.toUpperCase();
+                    return searchSpace.indexOf(searchFor) >= 0;
+                })
+                .map(ShowCard)}
         </div>
     </div>
 );
