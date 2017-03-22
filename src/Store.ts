@@ -31,7 +31,10 @@ const mapDispatchToProps = (dispatch: any) => {
         }
     };
 };
-
-const store = Redux.createStore(rootReducer);
+debugger;
+const store = Redux.createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 const connector = ReactRedux.connect(mapStateToProps, mapDispatchToProps);
-export { connector, store };
+export { connector, store, rootReducer };

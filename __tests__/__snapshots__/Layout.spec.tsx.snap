@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Reusable layout component Check snapshot for unexpected changes 1`] = `
-<div
-  className="app-container"
-/>
-`;
